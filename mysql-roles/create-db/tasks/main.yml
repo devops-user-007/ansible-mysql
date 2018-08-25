@@ -1,0 +1,9 @@
+---
+# tasks file for create-db
+- name: Create new database
+  mysql_db:
+    name: {{ db_name }}
+    login_host: {{ host_name }}
+    login_user: {{ mysql_user }}
+    login_password: {{ mysql_password }}
+    state: present

@@ -1,0 +1,10 @@
+---
+
+# Create a new MySql database
+
+- name: Create new MySql database
+  hosts: mysqlserver
+  become: yes
+  gather_facts: no
+  roles:
+    - create-db

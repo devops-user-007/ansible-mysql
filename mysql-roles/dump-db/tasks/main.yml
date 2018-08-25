@@ -1,0 +1,12 @@
+---
+# tasks file for dump-db
+
+- name: Dump MySql DB
+  mysql_db:
+    name: {{ db_name }}
+    state: dump
+    login_host: {{ hostname }}
+    login_user: {{ mysql_user }}
+    login_password: {{ mysql_password }}
+    target: /tmp/{{ dm_name }}.sql.gz
+   
